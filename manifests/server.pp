@@ -55,6 +55,14 @@ class openssh::server (
                         $pubkey_authentication             = true,
                         $challenge_response_authentication = false,
                         $print_motd                        = true,
+                        $kerberos_authentication           = false,
+                        $print_last_log                    = true,
+                        $ssh_server_keys_mode              = undef,
+                        $ssh_server_keys_filenames         = [
+                                                              '/etc/ssh/ssh_host_ecdsa_key',
+                                                              '/etc/ssh/ssh_host_ed25519_key',
+                                                              '/etc/ssh/ssh_host_rsa_key'
+                                                              ],
                       )inherits openssh::params {
 
   if($ciphers!=undef)
@@ -146,6 +154,14 @@ class openssh::server (
   if($allowusers!=undef)
   {
     openssh::allowuser { $allowusers:
+    }
+  }
+
+  if($ssh_server_keys_mode!=undef)
+  {
+    file { $ssh_server_keys_filenames:
+      ensure => 'present',
+      mode => $ssh_server_keys_mode,
     }
   }
 
