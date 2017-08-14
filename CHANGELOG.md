@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.1.41
+
+* added automatic directive selection (**AuthorizedKeysCommandUser**/**AuthorizedKeysCommandRunAs**) for **CentOS 6/7**
+
+## 0.1.40
+
+* bugfix **authorized_keys_command** in **CentOS 7**
+
 ## 0.1.38
 
 * added **authorized_keys_command** variable
