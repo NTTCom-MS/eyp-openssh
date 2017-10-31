@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 0.1.44
+
+* added **openssh::client::host** defined to configure host based openssh client options
+* added the following generic options for **ssh_config**:
+  - SendEnv
+  - ForwardX11Trusted
+
+## 0.1.43
+
+* added **key_source** to **openssh::privkey**
+
+## 0.1.42
+
+* added **allow_tcp_forwarding** to **openssh::server**
+
 ## 0.1.41
 
 * added automatic directive selection (**AuthorizedKeysCommandUser**/**AuthorizedKeysCommandRunAs**) for **CentOS 6/7**
