@@ -127,6 +127,22 @@ class openssh::server (
     creates => '/etc/ssh/ssh_host_rsa_key'
   }
 
+  if($openssh::params::sshd_global_config!=undef)
+  {
+    file { $openssh::params::sshd_global_config:
+      ensure  => 'present',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0600',
+      require => [
+                    Exec['keygen rsa key'],
+                    $require_packages,
+                ],
+      notify  => Class['openssh::service'],
+      content => "#\n",
+    }
+  }
+
   concat { $openssh::params::sshd_config:
     ensure  => 'present',
     owner   => 'root',
