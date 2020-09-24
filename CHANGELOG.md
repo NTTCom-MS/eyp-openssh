@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.55
+
+* added variable GatewayPorts
+
 ## 0.1.54
 
 * added support fro **Ubuntu 20.04**
