@@ -1,16 +1,17 @@
 # puppet2sitepp @sshmatch
 define openssh::match (
-                        $groups                  = undef,
-                        $users                   = undef,
-                        $addresses               = undef,
-                        $hosts                   = undef,
-                        $chrootdirectory         = undef,
-                        $forcecommand            = undef,
-                        $allow_tcp_forwarding    = undef,
-                        $allowed_ips             = undef,
-                        $password_authentication = undef,
-                        $banner                  = undef,
-                        $description             = undef,
+                        $groups                       = undef,
+                        $users                        = undef,
+                        $addresses                    = undef,
+                        $hosts                        = undef,
+                        $chrootdirectory              = undef,
+                        $forcecommand                 = undef,
+                        $allow_tcp_forwarding         = undef,
+                        $allowed_ips                  = undef,
+                        $password_authentication      = undef,
+                        $pubkey_authentication_match  = undef,
+                        $banner                       = undef,
+                        $description                  = undef,
                       ) {
   #
   if($groups!=undef)
