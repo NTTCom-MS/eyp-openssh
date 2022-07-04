@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.56
+
+* Added Publick key authentication within match
+
 ## 0.1.55
 
 * added variable GatewayPorts
