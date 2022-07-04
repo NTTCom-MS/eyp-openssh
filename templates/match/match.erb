@@ -15,6 +15,7 @@ Match <%= -%>
   <%- end -%>
   <%- if defined?(@password_authentication) -%>
   PasswordAuthentication <%= scope.function_bool2yesno([@password_authentication]) %>
+  PubkeyAuthentication <%= scope.function_bool2yesno([@pubkey_authentication_match]) %>
   <%- end -%>
   <%- if defined?(@forcecommand) -%>
   ForceCommand <%= @forcecommand %>
