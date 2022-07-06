@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.57
+
+* bugfix for Publick key authentication within match
+
 ## 0.1.56
 
 * Added Publick key authentication within match
